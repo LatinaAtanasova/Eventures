@@ -1,0 +1,57 @@
+﻿@using Eventures.Web.ViewModels.Orders
+@model ICollection<Eventures.Web.ViewModels.Events.EventViewModel>
+
+@using X.PagedList.Mvc;
+@using X.PagedList;
+@using X.PagedList.Mvc.Core
+
+@{
+    ViewData["Title"] = "All";
+}
+
+
+
+<h2 style="text-align: center; font-weight: bold">All Events</h2>
+
+<div class="container">
+    <hr style="height: 3px; background-color: #66ffff" />
+    <table class="table table-hover">
+
+        <thead>
+        <tr style="font-weight: bold">
+            <th>#</th>
+            <th>Name</th>
+            <th>Start</th>
+            <th>End</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+            
+        @{
+            var counter = (int)ViewBag.OnePageOfEvents.PageSize * (int)ViewBag.OnePageOfEvents.PageNumber + 1 - (int)ViewBag.OnePageOfEvents.PageSize;
+        }
+        @foreach (var item in ViewBag.OnePageOfEvents)
+            {
+                <tr>
+                    <td>@counter</td>
+                    <td>@item.Name</td>
+                    <td>@item.Start</td>
+                    <td>@item.End</td>
+                    <td>
+                        @await Html.PartialAsync("_CreateOrderPartial", new CreateOrderViewModel
+                        {
+                            EventId = @item.EventId
+                        })
+                    </td>
+                </tr>
+
+                counter++;
+            }
+        </tbody>
+    </table>
+    @Html.PagedListPager((IPagedList) ViewBag.OnePageOfEvents, page => Url.Action("All", new {page}))
+
+    <hr style="height: 3px; background-color: #66ffff" />
+
+</div>

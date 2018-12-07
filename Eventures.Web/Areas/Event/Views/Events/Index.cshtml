@@ -1,0 +1,9 @@
+﻿@using Eventures.Web.Areas.Event.Components
+@model IEnumerable<Eventures.Web.Areas.Event.ViewModels.EventureEventViewModel>
+
+@{
+}
+
+<div class="container">
+    @await Component.InvokeAsync(typeof(EventsComponent));
+</div>

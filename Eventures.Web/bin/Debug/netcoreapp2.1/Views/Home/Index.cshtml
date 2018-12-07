@@ -1,0 +1,50 @@
+﻿@using Eventures.Models
+@using Microsoft.AspNetCore.Identity
+
+@inject UserManager<EventuresUser> UserManager
+
+@{
+    ViewData["Title"] = "Home";
+    var currenUser = await UserManager.GetUserAsync(this.User);
+    var isCurrentUserAuthenticated = this.User?.Identity?.IsAuthenticated;
+}
+
+@if (isCurrentUserAuthenticated.HasValue && isCurrentUserAuthenticated.Value)
+{
+    if (this.User.IsInRole("Admin"))
+    {
+        <div class="container" style="padding: 20px 30px 0 0">
+            <div class="jumbotron" style="background-color: #AFEEEE; text-align: center">
+                <h2 style="font-weight: bold">Greetings, Administrator - @UserManager.GetUserName(this.User)!</h2>
+                <hr style="height: 3px; background-color: darkgrey" />
+                <p>
+                    <strong style="color: darkgrey">Enjoy your work.</strong>
+                </p>
+            </div>
+        </div>
+    }
+
+    else
+    {
+        <div class="container" style="padding: 20px 30px 0 0">
+            <div class="jumbotron" style="background-color: #AFEEEE; text-align: center">
+                <h2 style="font-weight: bold">Welcome, @UserManager.GetUserName(this.User)!</h2>
+                <hr style="height: 3px; background-color: darkgrey" />
+                <p>
+                    <strong style="color: darkgrey">Eventures wishes you an exciting experience.</strong>
+                </p>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <div class="jumbotron mt-3" style="background-color: #AFEEEE; margin-top: 20px">
+        <h2 style="color: black; font-weight: bold">Eventures - The best ticket service in the world.</h2>
+        <hr class="eventures-bg-color" style="background-color: black; font-weight: bold; height: 3px"/>
+        <h3><a asp-controller="Account" asp-action="Login" class="nav-link-dark">Login</a> to start "eventing".</h3>
+        <h3>@Html.ActionLink("Register", "Register", "Account", null, new { @class = "nav-link-dark" }) if you don't have an account.</h3>
+    </div>
+}
+
+

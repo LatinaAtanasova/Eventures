@@ -1,0 +1,26 @@
+﻿@model Eventures.Web.ViewModels.Accounts.AdministrationViewModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+<form class="form-inline" method="post" asp-controller="Account" asp-action="ChangeRole">
+    <div class="form-group mx-sm-3 mb-2">
+        @*<label asp-for="TicketsCount" style="font-weight: bold">Tickets</label>
+            <input asp-for="TicketsCount" class="form-control">*@
+        @*<span asp-validation-for="TicketsCount" class="text-danger"></span>*@
+    </div>
+
+    @if (@Model.CurrentRole == "Admin")
+    {
+    <button type="submit" class="btn btn-primary mb-2" style="background-color: #AFEEEE; color: black; border-color: darkgrey">Demote</button>
+        <input type="hidden" aspasp-for="UserId" value="@Model.UserId" />
+    }
+    @if (@Model.CurrentRole == "User")
+    {
+        <button type="submit" class="btn btn-primary mb-2" style="background-color: #AFEEEE; color: black; border-color: darkgrey">Promote</button>
+        <input type="hidden" asp-for="UserId" value="@Model.UserId" />
+    }
+
+
+</form>
