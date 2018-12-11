@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eventures.Data", "Eventures
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eventures.Models", "Eventures.Models\Eventures.Models.csproj", "{FDBA1939-9C99-413F-92EA-F5C63BED711F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eventures.Services", "Eventures.Services\Eventures.Services.csproj", "{ADF1197E-9A21-40E5-97B8-5F52197F4BB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eventures.Services", "Eventures.Services\Eventures.Services.csproj", "{ADF1197E-9A21-40E5-97B8-5F52197F4BB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eventures.Tests", "Eventures.Tests\Eventures.Tests.csproj", "{A248EB13-6099-4DA4-AAE1-1E7E6976883F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{ADF1197E-9A21-40E5-97B8-5F52197F4BB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADF1197E-9A21-40E5-97B8-5F52197F4BB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADF1197E-9A21-40E5-97B8-5F52197F4BB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A248EB13-6099-4DA4-AAE1-1E7E6976883F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A248EB13-6099-4DA4-AAE1-1E7E6976883F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A248EB13-6099-4DA4-AAE1-1E7E6976883F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A248EB13-6099-4DA4-AAE1-1E7E6976883F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

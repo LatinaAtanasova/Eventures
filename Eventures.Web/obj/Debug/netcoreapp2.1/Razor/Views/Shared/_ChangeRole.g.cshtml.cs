@@ -60,7 +60,7 @@ using Eventures.Web.Models;
             WriteLiteral("\r\n\r\n\r\n");
             EndContext();
             BeginContext(192, 939, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "71a4cf95b41f4bf69d249d1e86ed61c1", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d100fd06dd2e482582ecd54a4e3958e1", async() => {
                 BeginContext(281, 45, true);
                 WriteLiteral("\r\n    <div class=\"form-group mx-sm-3 mb-2\">\r\n");
                 EndContext();
@@ -104,7 +104,7 @@ WriteAttributeValue("", 819, Model.UserId, 819, 13, false);
                 WriteLiteral("        <button type=\"submit\" class=\"btn btn-primary mb-2\" style=\"background-color: #AFEEEE; color: black; border-color: darkgrey\">Promote</button>\r\n        ");
                 EndContext();
                 BeginContext(1049, 62, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "17a6ad79f31b4da9914e7022f6c55e2e", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "e12dc7f9f2b644c089915da592cd4f79", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
